@@ -6,7 +6,7 @@ public class BinaryTree {
     }
 
     void insertValue(int value){
-        this.Tree.getValue()
+        this.Tree.getValue();
     }
 
 

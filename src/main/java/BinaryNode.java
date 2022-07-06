@@ -34,14 +34,18 @@ public class BinaryNode {
         return leftNode;
     }
     public BinaryNode getRightNode(){
-        return rightNode
+        return rightNode;
     }
     public void createNewNode(int val){
         if (rightNode==null && val>this.value){
             rightNode = new BinaryNode(val);
         } else if(leftNode == null && val<this.value){
             leftNode = new BinaryNode(val);
-        } else if ( val == )
+        } else if (val==leftNode.value || val == rightNode.value) {
+            System.out.println("duplicate value");
+        } else{
+            System.out.println("both nodes taken");
+        }
     }
 
 
