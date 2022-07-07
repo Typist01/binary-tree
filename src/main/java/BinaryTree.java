@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class BinaryTree{
     private BinaryNode tree;
     private BinaryNode currentNode;
@@ -39,6 +41,24 @@ public class BinaryTree{
         }
         return 0;
     }
+    private ArrayList toList(BinaryTree myTree){
+        currentNode = tree;
+        ArrayList myList = new ArrayList();
+        return myList;
+    }
+    private BinaryNode getLeftNodes(){
+        if (!currentNode.hasLeft()){
+            BinaryNode returnNode = currentNode;
+            if (currentNode.hasRight())
+                currentNode = currentNode.getRightNode();
+            return returnNode;
+        }
+        else {
+            currentNode = currentNode.getLeftNode();
+        }
+    }
+
+
 
 //    public void createNewNode(int val){
 //        if(val<this.value){
