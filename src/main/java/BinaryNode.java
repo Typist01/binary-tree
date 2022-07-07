@@ -8,7 +8,6 @@ public class BinaryNode {
     BinaryNode(int value){
         this.value = value;
     }
-
     public int getValue(){
         return this.value;
     }
@@ -17,11 +16,10 @@ public class BinaryNode {
     }
 
     public void createLeftNode(int value){
-        BinaryNode leftNode = new BinaryNode(value);
-
+        this.leftNode = new BinaryNode(value);
     }
     public void createRightNode(int value){
-            BinaryNode rightNode = new BinaryNode(value);
+        this.rightNode = new BinaryNode(value);
     }
     public Boolean hasLeft(){
         return !(leftNode==null);
@@ -36,23 +34,21 @@ public class BinaryNode {
     public BinaryNode getRightNode(){
         return rightNode;
     }
-    public void createNewNode(int val){
-        if (rightNode==null && val>this.value){
-            rightNode = new BinaryNode(val);
-        } else if(leftNode == null && val<this.value){
-            leftNode = new BinaryNode(val);
-        } else if (val==leftNode.value || val == rightNode.value) {
-            System.out.println("duplicate value");
-        } else{
-            System.out.println("both nodes taken");
-        }
+//    public void createNewNode(int val){
+//        if(val<this.value){
+//            if (this.leftNode==null)
+//                this.leftNode = new BinaryNode(val);
+//            else
+//                currentNode = getLeftNode();
+//
+//        } else if (val>this.value){
+//            if (this.rightNode==null)
+//                this.rightNode = new BinaryNode(val);
+//        }
+//        } else if (val==leftNode.value || val == rightNode.value) {
+//            System.out.println("duplicate value");
+//            return;
+//        }
     }
 
 
-
-
-
-
-
-
-}
