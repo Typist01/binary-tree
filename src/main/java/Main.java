@@ -2,7 +2,7 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Main {
-//this is alternative
+//this is tree2
     public static void main(String[] args) {
         int[] myList = {3, 2, 1, 4};
         TreeAdapter adapter = new TreeAdapter();
