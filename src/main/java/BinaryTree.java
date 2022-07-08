@@ -46,18 +46,23 @@ public class BinaryTree{
         ArrayList myList = new ArrayList();
         return myList;
     }
-    private BinaryNode getLeftNodes(){
-        if (!currentNode.hasLeft()){
-            BinaryNode returnNode = currentNode;
-            if (currentNode.hasRight())
-                currentNode = currentNode.getRightNode();
-            return returnNode;
-        }
-        else {
-            currentNode = currentNode.getLeftNode();
-        }
+
+    public int[] sortArray(int[] arrayToSort){
+        currentNode = tree;
+        int i = 0;
+        getNodes(currentNode);
+
     }
 
+
+    public void getNodes(BinaryNode node){
+        if (node.hasLeft())
+            getNodes(node.getLeftNode());
+        System.out.println(node.getValue());
+
+        if (node.hasRight())
+            getNodes(node.getRightNode());
+    }
 
 
 //    public void createNewNode(int val){

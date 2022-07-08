@@ -5,6 +5,8 @@ public class Main {
     public static void main(String[] args) {
         int[] myList = {3, 2, 1, 4};
         BinaryTree myTree = listToTree(myList);
+        myTree.printNodes();
+
 //        BinaryNode myNode = myNode = new BinaryNode(3);
 
 

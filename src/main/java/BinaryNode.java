@@ -14,7 +14,6 @@ public class BinaryNode {
     public void setValue(int value){
         this.value=value;
     }
-
     public void createLeftNode(int value){
         this.leftNode = new BinaryNode(value);
     }
@@ -24,7 +23,6 @@ public class BinaryNode {
     public Boolean hasLeft(){
         return !(leftNode==null);
     }
-
     public Boolean hasRight(){
         return !(rightNode==null);
     }
