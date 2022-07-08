@@ -1,18 +1,19 @@
 import java.util.ArrayList;
-public class BinaryTree{
-    private BinaryNode tree;
+
+public class BinaryTree2 extends BinaryNode{
+
     private BinaryNode currentNode;
     private int nodeCount;
-    BinaryTree(int rootVal) {
-        this.tree = new BinaryNode(rootVal);
+
+
+    BinaryTree2(int rootVal) {
+        super(rootVal);
         nodeCount++;
     }
-    public BinaryNode getTree(){
-        return this.tree; // returns root node
-    }
+
     //add a value to the tree
     public int insert(int val) throws Exception{
-        this.currentNode = tree;
+        this.currentNode = this;
         int result = this.add(val);
         if (result == 1)
             this.nodeCount++;
@@ -44,7 +45,7 @@ public class BinaryTree{
         return 0;
     }
 
-//    private ArrayList toList(BinaryTree myTree){
+    //    private ArrayList toList(BinaryTree myTree){
 //        ArrayList<Integer> intList = new ArrayList();
 //        collectNodes(tree, intList);
 //        return intList;

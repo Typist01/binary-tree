@@ -1,11 +1,14 @@
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Main {
-
+//this is alternative
     public static void main(String[] args) {
         int[] myList = {3, 2, 1, 4};
-        BinaryTree myTree = listToTree(myList);
-        myTree.printNodes();
+        TreeAdapter adapter = new TreeAdapter();
+        BinaryTree myTree = adapter.toTree(myList);
+        System.out.println(myTree);
+        System.out.println(adapter.toList(myTree));
 
 //        BinaryNode myNode = myNode = new BinaryNode(3);
 
@@ -31,19 +34,19 @@ public class Main {
 //        }
     }
 
-    static BinaryTree listToTree(int[] myList){
-        BinaryTree myTree = new BinaryTree(myList[0]);
-        try{
-            for (int i=1;i<myList.length;i++){
-                System.out.println("inserting: " + myList[i]);
-                myTree.insert(myList[i]);
-            }
-            return myTree;
-        } catch(Exception e){
-            e.printStackTrace();
-        }
-        return myTree;
-    }
+//    static BinaryTree listToTree(int[] myList){
+//        BinaryTree myTree = new BinaryTree(myList[0]);
+//        try{
+//            for (int i=1;i<myList.length;i++){
+//                System.out.println("inserting: " + myList[i]);
+//                myTree.insert(myList[i]);
+//            }
+//            return myTree;
+//        } catch(Exception e){
+//            e.printStackTrace();
+//        }
+//        return myTree;
+//    }
 
 
 
