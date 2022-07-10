@@ -1,13 +1,13 @@
 //import java.util.ArrayList;
-//public class BinaryTree{
-//    private BinaryNode tree;
-//    private BinaryNode currentNode;
+//public class BinaryTree.BinaryTree{
+//    private BinaryTree.BinaryNode tree;
+//    private BinaryTree.BinaryNode currentNode;
 //    private int nodeCount;
-//    BinaryTree(int rootVal) {
-//        this.tree = new BinaryNode(rootVal);
+//    BinaryTree.BinaryTree(int rootVal) {
+//        this.tree = new BinaryTree.BinaryNode(rootVal);
 //        nodeCount++;
 //    }
-//    public BinaryNode getTree(){
+//    public BinaryTree.BinaryNode getTree(){
 //        return this.tree; // returns root node
 //    }
 //    //add a value to the tree
@@ -44,7 +44,7 @@
 //        return 0;
 //    }
 //
-////    private ArrayList toList(BinaryTree myTree){
+////    private ArrayList toList(BinaryTree.BinaryTree myTree){
 ////        ArrayList<Integer> intList = new ArrayList();
 ////        collectNodes(tree, intList);
 ////        return intList;
@@ -55,7 +55,7 @@
 //////        getNodes(currentNode);
 //////
 //////    }
-//    private void collectNodes(BinaryNode node, ArrayList intList){
+//    private void collectNodes(BinaryTree.BinaryNode node, ArrayList intList){
 //        if (node.hasLeft())
 //            collectNodes(node.getLeftNode(), intList);
 //        System.out.println(node.getValue());

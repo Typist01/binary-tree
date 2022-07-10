@@ -1,6 +1,6 @@
-import javax.naming.BinaryRefAddr;
+package BinaryTree;
 
-public class BinaryNode {
+class BinaryNode {
     private BinaryNode leftNode;
     private BinaryNode rightNode;
     private int value;

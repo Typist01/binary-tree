@@ -1,13 +1,21 @@
+package BinaryTree;
+
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
 
 public class BinaryTree extends BinaryNode{
     private BinaryNode currentNode;
     private int nodeCount;
-    BinaryTree(int rootVal) {
+    public BinaryTree(int rootVal) {
         super(rootVal);
         nodeCount++;
     }
-    int getNodeCount(){
+//    public BinaryTree(){
+//        super(null);
+//    }
+
+    public int getNodeCount(){
         return nodeCount;
     }
     //add a value to the tree
@@ -40,17 +48,14 @@ public class BinaryTree extends BinaryNode{
             }
         }
     }
-    //    private ArrayList toList(BinaryTree myTree){
-//        ArrayList<Integer> intList = new ArrayList();
-//        collectNodes(tree, intList);
-//        return intList;
-//    }
-////    public int[] sortArray(int[] arrayToSort){
-////        currentNode = tree;
-////        int i = 0;
-////        getNodes(currentNode);
-////
-////    }
+    public List toList(){
+        TreeAdapter adapter = new TreeAdapter();
+        long startTime = System.nanoTime();
+        List result = adapter.toList(this);
+        long endTime = System.nanoTime();
+        System.out.println("Tree converted to a sorted list in " + (startTime-endTime)/1000000000 + " seconds.");
+        return adapter.toList(this);
+    }
     private void collectNodes(BinaryNode node, ArrayList intList){
         if (node.hasLeft())
             collectNodes(node.getLeftNode(), intList);
