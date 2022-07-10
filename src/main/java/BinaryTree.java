@@ -1,18 +1,18 @@
 import java.util.ArrayList;
-public class BinaryTree{
-    private BinaryNode tree;
+
+public class BinaryTree extends BinaryNode{
     private BinaryNode currentNode;
     private int nodeCount;
     BinaryTree(int rootVal) {
-        this.tree = new BinaryNode(rootVal);
+        super(rootVal);
         nodeCount++;
     }
-    public BinaryNode getTree(){
-        return this.tree; // returns root node
+    int getNodeCount(){
+        return nodeCount;
     }
     //add a value to the tree
     public int insert(int val) throws Exception{
-        this.currentNode = tree;
+        this.currentNode = this;
         int result = this.add(val);
         if (result == 1)
             this.nodeCount++;
@@ -20,7 +20,9 @@ public class BinaryTree{
     }
     // add a value to the tree, request is passed in from the insert method
     private int add(int val) throws Exception {
-        if (val < this.currentNode.getValue()) {
+        if (val==this.currentNode.getValue()){
+            throw new Exception("Value already in the tree");
+        }else if (val < this.currentNode.getValue()) {
             if (!this.currentNode.hasLeft()) {
                 this.currentNode.createLeftNode(val);
                 return 1;
@@ -28,8 +30,7 @@ public class BinaryTree{
                 this.currentNode = this.currentNode.getLeftNode();
                 return add(val);
             }
-        }
-        else if (val > this.currentNode.getValue()) {
+        } else { //val is greater so go right
             if (!this.currentNode.hasRight()) {
                 this.currentNode.createRightNode(val);
                 return 1;
@@ -38,13 +39,8 @@ public class BinaryTree{
                 return add(val);
             }
         }
-        if (val==this.currentNode.getValue()){
-            throw new Exception("Value already in the tree");
-        }
-        return 0;
     }
-
-//    private ArrayList toList(BinaryTree myTree){
+    //    private ArrayList toList(BinaryTree myTree){
 //        ArrayList<Integer> intList = new ArrayList();
 //        collectNodes(tree, intList);
 //        return intList;
@@ -63,5 +59,4 @@ public class BinaryTree{
         if (node.hasRight())
             collectNodes(node.getRightNode(), intList);
     }
-
 }

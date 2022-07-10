@@ -1,6 +1,3 @@
-import java.awt.*;
-import java.util.ArrayList;
-
 public class Main {
 //this is tree2
     public static void main(String[] args) {
@@ -11,8 +8,6 @@ public class Main {
         System.out.println(adapter.toList(myTree));
 
 //        BinaryNode myNode = myNode = new BinaryNode(3);
-
-
 //        System.out.println(myTree.tree.getRightNode().getValue());
 //        BinaryTree myTree = new BinaryTree(3);
 //        try{
@@ -47,7 +42,6 @@ public class Main {
 //        }
 //        return myTree;
 //    }
-
 
 
 }

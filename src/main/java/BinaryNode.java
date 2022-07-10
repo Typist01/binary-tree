@@ -32,21 +32,7 @@ public class BinaryNode {
     public BinaryNode getRightNode(){
         return rightNode;
     }
-//    public void createNewNode(int val){
-//        if(val<this.value){
-//            if (this.leftNode==null)
-//                this.leftNode = new BinaryNode(val);
-//            else
-//                currentNode = getLeftNode();
-//
-//        } else if (val>this.value){
-//            if (this.rightNode==null)
-//                this.rightNode = new BinaryNode(val);
-//        }
-//        } else if (val==leftNode.value || val == rightNode.value) {
-//            System.out.println("duplicate value");
-//            return;
-//        }
+
     }
 
 

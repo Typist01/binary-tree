@@ -17,7 +17,7 @@ public class TreeAdapter {
     }
     public List toList(BinaryTree tree){
         ArrayList<Integer> intList = new ArrayList();
-        collectNodes(tree.getTree(), intList);
+        collectNodes(tree, intList);
         return intList;
     }
     private void collectNodes(BinaryNode node, ArrayList intList){
